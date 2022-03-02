@@ -36,6 +36,22 @@ Simple installation script can be found in [scripts/aca-apply-extension.sh](scri
 
 >> You may run this script in different location, to it doesn't requires resources from this project
 
+A sample common flow to install ACA and this package is ...
+
+```
+$ ./aca-apply-extension.sh -aca -install
+```
+
+... that will clone ACA Repository, install Node dependencies and deploy `take-ownership` module
+
+Additional uninstalling command is provided...
+
+```
+$ ./aca-apply-extension.sh -uninstall
+```
+
+... that uninstall the module and revert all changes in configuration files.
+
 ## Running
 
 Once ACA application is ready, remember to create your `.env` file with Repository URL and start the application.
