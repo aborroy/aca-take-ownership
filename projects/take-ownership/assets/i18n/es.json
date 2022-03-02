@@ -1,0 +1,11 @@
+{
+  "ACA": {
+    "TAKE_OWNERSHIP_ACTION_TITLE": "Hacerse Propietario",
+    "DIALOGS" : {
+      "CONFIRM_TAKE_OWNERSHIP" : {
+        "TITLE": "Hacerse Propietario",
+        "MESSAGE": "¿Quieres hacerte propietario de este nodo?"
+      }
+    }
+  }
+}

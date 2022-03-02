@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "take-ownership": {
+      "projectType": "library",
+      "root": "projects/take-ownership",
+      "sourceRoot": "projects/take-ownership/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/take-ownership/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/take-ownership/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/take-ownership/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/take-ownership/src/test.ts",
+            "tsConfig": "projects/take-ownership/tsconfig.spec.json",
+            "karmaConfig": "projects/take-ownership/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "take-ownership"
 }

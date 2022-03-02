@@ -1,0 +1,74 @@
+{
+  "$schema": "../../../extension.schema.json",
+  "$id": "take-ownership",
+  "$version": "1.0.0",
+  "$vendor": "Alfresco",
+  "$name": "take-ownership-extension",
+  "$description": "Adds Take Ownership action to folders and documents",
+  "$license": "LGPL-3.0",
+
+  "actions": [
+    {
+      "id": "aca.take.ownership",
+      "type": "TAKE_OWNERSHIP_ACTION",
+      "payload": "$(context.selection.first.entry)"
+    }
+  ],
+
+  "features": {
+    "toolbar": [
+      {
+        "id": "app.toolbar.more",
+        "children": [
+          {
+            "id": "aca.toolbar.take.ownership",
+            "order": 100,
+            "icon": "perm_identity",
+            "title": "ACA.TAKE_OWNERSHIP_ACTION_TITLE",
+            "actions": {
+              "click": "aca.take.ownership"
+            },
+            "rules": {
+              "visible": "aca.canTakeOwnerShip"
+            }
+          }
+        ]
+      }
+    ],
+    "contextMenu": [
+      {
+        "id": "aca.context.take.ownership",
+        "order": 460,
+        "icon": "perm_identity",
+        "title": "ACA.TAKE_OWNERSHIP_ACTION_TITLE",
+        "actions": {
+          "click": "aca.take.ownership"
+        },
+        "rules": {
+          "visible": "aca.canTakeOwnerShip"
+        }
+      }
+    ],
+    "viewer": {
+      "toolbarActions": [
+        {
+            "id": "app.viewer.toolbar.more",
+            "children": [
+              {
+                "id": "aca.viewer.take.ownership",
+                "order": 2,
+                "icon": "perm_identity",
+                "title": "ACA.TAKE_OWNERSHIP_ACTION_TITLE",
+                "actions": {
+                  "click": "aca.take.ownership"
+                },
+                "rules": {
+                  "visible": "aca.canTakeOwnerShip"
+                }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

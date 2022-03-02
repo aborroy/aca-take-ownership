@@ -1,0 +1,11 @@
+{
+  "ACA": {
+    "TAKE_OWNERSHIP_ACTION_TITLE": "Take Ownership",
+    "DIALOGS" : {
+      "CONFIRM_TAKE_OWNERSHIP" : {
+        "TITLE": "Take Ownership",
+        "MESSAGE": "Do you want to take ownership of this node?"
+      }
+    }
+  }
+}

@@ -1,27 +1,44 @@
-# AcaTakeOwnership
+# Alfresco ACA TakeOwnership Extension
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+An extension module for the Alfresco Content Application that enables "Take Ownership" feature.
 
-## Development server
+Integrates with:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* Context Menus
+* Toolbars
+* Viewer
 
-## Code scaffolding
+## Building
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The module is available in [projects/take-ownership](projects/take-ownership) folder.
 
-## Build
+Local build can be achived by using following commands:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+$ npm run build:take-ownership
+$ cd dist/take-ownership
+$ npm pack
+```
 
-## Running unit tests
+This will produce `take-ownership-0.0.1.tgz` file that can be installed in ACA.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+>> Currently this module is not published, but `npm publish` can be used in `dist/take-ownership` folder to upload the module to npm[https://www.npmjs.com].
 
-## Running end-to-end tests
+## Installation
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Simple installation script can be found in [scripts/aca-apply-extension.sh](scripts/aca-apply-extension.sh) file, that includes following operations:
 
-## Further help
+* Clone ACA Git Repository
+* Install Node dependencies
+* Install `take-ownership` dependency (from `take-ownership-0.0.1.tgz`)
+* Apply configuration to ACA source code
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+>> You may run this script in different location, to it doesn't requires resources from this project
+
+## Running
+
+Once ACA application is ready, remember to create your `.env` file with Repository URL and start the application.
+
+```
+$ npm start
+```

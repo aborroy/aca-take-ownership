@@ -1,32 +1,67 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "downlevelIteration": true,
+    "importHelpers": true,
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
+    "module": "esnext",
     "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "target": "es2015",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
     "lib": [
-      "es2020",
+      "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@alfresco/aca-shared": [
+        "projects/aca-shared/src/public-api.ts"
+      ],
+      "@alfresco/aca-shared/store": [
+        "projects/aca-shared/store/src/public-api.ts"
+      ],
+      "@alfresco/aca-shared/rules": [
+        "projects/aca-shared/rules/src/public-api.ts"
+      ],
+      "@alfresco/adf-office-services-ext": [
+        "projects/adf-office-services-ext/src/public-api.ts"
+      ],
+      "@alfresco/aca-testing-shared": [
+        "projects/aca-testing-shared"
+      ],
+      "@alfresco/aca-about": [
+        "projects/aca-about/src/public-api.ts"
+      ],
+      "@alfresco/aca-settings": [
+        "projects/aca-settings/src/public-api.ts"
+      ],
+      "package.json": [
+        "package.json"
+      ],
+      "take-ownership": [
+        "dist/take-ownership/take-ownership",
+        "dist/take-ownership"
+      ]
+    }
   },
+  "exclude": [
+    "node_modules"
+  ],
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
+    "preserveWhitespaces": false,
+    "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
     "strictTemplates": true
   }
 }
