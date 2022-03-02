@@ -15,6 +15,7 @@ The module is available in [projects/take-ownership](projects/take-ownership) fo
 Local build can be achived by using following commands:
 
 ```
+$ npm install
 $ npm run build:take-ownership
 $ cd dist/take-ownership
 $ npm pack
