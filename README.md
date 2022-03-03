@@ -8,6 +8,8 @@ Integrates with:
 * Toolbars
 * Viewer
 
+>> This module has been developed with ACA 2.8.0, ACS 7.1.1 and NodeJS 12.22.10
+
 ## Building
 
 The module is available in [projects/take-ownership](projects/take-ownership) folder.
